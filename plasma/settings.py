@@ -27,13 +27,15 @@ SECRET_KEY = 'h-o)ekd&vvjkz+)yhyz6*vo-fxj48)y-sc0&scri_n2b^=&qa+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',"myplasmadonar.herokuapp.com"]
+ALLOWED_HOSTS = ['127.0.0.1','myplasmaapp.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -73,7 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'plasma.wsgi.application'
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
