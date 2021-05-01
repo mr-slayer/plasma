@@ -27,7 +27,7 @@ SECRET_KEY = 'h-o)ekd&vvjkz+)yhyz6*vo-fxj48)y-sc0&scri_n2b^=&qa+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','myplasmaapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','hellodonar.herokuapp.com']
 
 
 # Application definition
