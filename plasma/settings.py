@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['127.0.0.1','myplasmaapp.herokuapp.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
