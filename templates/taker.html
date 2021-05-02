@@ -13,7 +13,7 @@
      <style>
 
      .header {
-  padding: 60px;
+  padding: 30px;
   text-align: center;
   color: Black;
   font-size: 30px;
@@ -37,14 +37,14 @@
   </head>
   <body>
   <div class="header">
-  <h1>Available Plasma Donars</h1>
-  <p>Lets Save The World...</p>
+  <h1><strong>Available Plasma Donars</strong></h1>
+  {% comment %} <p>Lets Save The World...</p> {% endcomment %}
 </div>
 <div class="row">
   {% for item in donars %}
 
  
-  <div class="col-sm-4" style="margin-top:40px;">
+  <div class="col-sm-4" style="margin-top:40px;margin-bottom:40px;">
     <div class="card bg-light">
       <div class="card-body">
         <h5 class="card-title">Name : {{item.name}}</h5>
