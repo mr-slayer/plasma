@@ -31,7 +31,8 @@ def dregister(request):
         name=request.POST['name']
         age=request.POST['age']
         sex=request.POST['sex']
-        address=request.POST['address']
+        mobileNo=request.POST['mobileNo']
+        blood=request.POST['blood']
         city=request.POST['city']
         state=request.POST['state']
         pincode=request.POST['pincode']
@@ -40,7 +41,8 @@ def dregister(request):
     doc_ref.add({"name":name,
     "age":age,
     "sex":sex,
-    "address":address,
+    "mobileNo":mobileNo,
+    "blood":blood,
     "city":city,
     "state":state,
     "pincode":pincode})
