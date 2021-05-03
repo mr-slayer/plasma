@@ -16,8 +16,7 @@ def taker(request):
 
     doc = doc_ref.get()
     for i in doc:
-        print(i)
-        print(f'Document data: {i.to_dict()}')
+
         l.append(i.to_dict())
     # if doc.exists:
     #     print(f'Document data: {doc.to_dict()}')
