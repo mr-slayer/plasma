@@ -41,7 +41,7 @@
   </head>
   <body>
     <div class="header">
-  <h1 class="heading">Lets Donate For SomeOne</h1>
+  <h1 class="heading">Lets Donate For Someone</h1>
   <p><strong>Eligibility criteria: </strong>
   <ul>
   <li >The donor should weigh 50 kilos and above </li>
@@ -54,23 +54,27 @@
 </div>
   <div class="formClass">
    <form class="container" action="dregister" method="POST">
+   {% comment %} <form class="row g-3 needs-validation" validate> {% endcomment %}
    {% csrf_token %}
   <div class="col-md-6">
     <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+    <input type="text" class="form-control" name="name" required id="name" placeholder="Name" required>
   </div>
     <div class="col-md-6">
     <label for="age" class="form-label">age</label>
-    <input type="text" class="form-control" name="age" id="age" placeholder="Age">
+    <input type="text" class="form-control" name="age" id="age" placeholder="Age" required>
   </div>
   <div class="col-md-6">
   <br>
    
  <label for="sex">Sex:</label>
-    <select id="sex" name="sex">
+    <select id="sex" name="sex" required>
+  
+    <option value="">Select</option>
 
     <option value="male">Male</option>
     <option value="female">Female</option>
+    <option value="others">Others</option>
    
   </select>
   </div>
@@ -78,13 +82,14 @@
   <br>
   <div class="col-md-6">
     <label for="mobileNo" class="form-label">Mobile No</label>
-    <input type="text" class="form-control" id="mobileNo" name="mobileNo" placeholder="Mobile No">
+    <input type="text" class="form-control" id="mobileNo" name="mobileNo" placeholder="Mobile No" required>
   </div>
   <br>
   <div class="col-md-6">
     <label for="blood" class="form-label">Blood Group</label>
-  <select name="blood" >
-  <option value="Choose">Choose...</option>
+  <select name="blood" required>
+  {% comment %} <option value="Choose">Choose...</option> {% endcomment %}
+  <option value="">Select</option>
   <option value="A+">A+</option><option value="A-">A-</option>
   <option value="B+">B+</option><option value="B-">B-</option>
   <option value="O+">O+</option><option value="O-">O-</option>
@@ -102,8 +107,8 @@
   <br>
    
  <label for="state">State:</label>
-    <select id="state" name="state">
-<option value="Andhra Pradesh">Choose State...</option>
+    <select id="state" name="state" required>
+<option value="">Select</option>
 <option value="Andhra Pradesh">Andhra Pradesh</option>
 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -145,11 +150,11 @@
   <br>
   <div class="col-md-6">
     <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" name="city" id="inputCity" placeholder="City">
+    <input type="text" class="form-control" name="city" id="inputCity" placeholder="City" required>
   </div>
   <div class="col-md-2">
     <label for="pincode" class="form-label">PinCode</label>
-    <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Pincode">
+    <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Pincode" required>
   </div>
  <br>
   <div class="col-3">

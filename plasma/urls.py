@@ -20,7 +20,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.home,name="home"),
-    path("donar",views.donar,name="donar"),
+    path("donor",views.donar,name="donar"),
     path("dregister",views.dregister,name="dregister"),
     path("taker",views.taker,name="taker"),
  
